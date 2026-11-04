@@ -1,0 +1,59 @@
+{
+  "version": "11.0-beta.3+212a7d6a5",
+  "checks": [
+    {
+      "name": "production bootstrap initialized",
+      "passed": true
+    },
+    {
+      "name": "settings pane registered",
+      "passed": true
+    },
+    {
+      "name": "real credential store save/read",
+      "passed": true
+    },
+    {
+      "name": "real credential store replace",
+      "passed": true
+    },
+    {
+      "name": "real credential store remove",
+      "passed": true
+    },
+    {
+      "name": "real context-menu API renders synthetic selection",
+      "passed": true
+    },
+    {
+      "name": "preference markup and external script loaded",
+      "passed": true
+    },
+    {
+      "name": "settings Save Token handler",
+      "passed": true
+    },
+    {
+      "name": "Test Connection UI handler (mocked API)",
+      "passed": true
+    },
+    {
+      "name": "settings Remove Saved Token handler",
+      "passed": true
+    },
+    {
+      "name": "menu and preferences cleanup",
+      "passed": true
+    },
+    {
+      "name": "Zotero copy workflow with mocked ADS and clipboard",
+      "passed": true
+    }
+  ],
+  "error": null,
+  "copyDiagnostics": {
+    "requests": 2,
+    "alerts": [],
+    "clipboardWritten": true
+  }
+}

@@ -1,0 +1,47 @@
+$ pnpm typecheck && pnpm test && pnpm build
+$ tsc --noEmit
+$ node --import tsx --test tests/*.test.ts
+✔ finds bibcode in Extra, ADS URL, legacy URL and archive metadata (1.285375ms)
+✔ normalizes DOI and modern/legacy/versioned arXiv identifiers (0.760584ms)
+✔ conflicting bibcodes are rejected; higher priority bibcode wins over DOI (0.735917ms)
+✔ resolves existing bibcode and canonicalizes alternate bibcodes (0.262208ms)
+✔ resolves DOI-only paper using exact returned DOI (0.162333ms)
+✔ resolves arXiv-only paper including legacy identifiers (0.172625ms)
+✔ falls back from unindexed DOI to exact arXiv ID (0.121458ms)
+✔ missing identifiers never trigger title guessing (0.155ms)
+✔ rejects ambiguous, truncated, and inexact identifier matches (0.291792ms)
+✔ single-entry formatting is exactly the ADS response, including outer whitespace and CRLF (1.27775ms)
+✔ scanner preserves macros, long author lists, special characters and nested apparent entry headers (0.290709ms)
+✔ scanner rejects malformed exports, duplicate keys and unrelated entries (0.307042ms)
+✔ batch export uses one request, deduplicates, and retains exact in-order response (0.336791ms)
+✔ reorders whole unmodified entries when ADS ignores requested order (0.541625ms)
+✔ partial resolution copies successes and reports failed titles and reasons (0.254083ms)
+✔ omitted batch entries are retried individually; record failure preserves successful entries (0.173042ms)
+✔ recovers missing or malformed batch exports without duplicating/rebuilding entry bodies (0.897542ms)
+✔ complete failure and invalid single exports leave clipboard untouched (0.297084ms)
+✔ authentication/rate/network failures stop further requests and report every affected paper (0.240041ms)
+✔ ADS client sends official authenticated search and batch export shapes with redirects forbidden (13.590708ms)
+✔ ADS client sanitizes invalid-token, rate-limit, server, JSON and network failures (1.242875ms)
+✔ timeouts and shutdown abort in-flight requests (4.771916ms)
+✔ invalid search and export response schemas fail closed (0.738708ms)
+✔ rate limiting on a later export chunk retains earlier successful entries (1.51375ms)
+✔ install manifest includes required Zotero metadata and a secure inert update URL (1.23325ms)
+✔ credential store supports asynchronous current Gecko APIs (0.83325ms)
+✔ credential store supports Zotero 7 synchronous fallback without plain-text prefs (0.185333ms)
+✔ credential failures never reflect secrets in errors (0.434292ms)
+✔ main library API menu registers, labels, filters mixed selections, and unregisters (0.6105ms)
+✔ Zotero 7 fallback menu handles window lifecycle and unsupported selections (0.190334ms)
+✔ integration copies only supported papers, preserves text and reports success (16.0985ms)
+✔ integration missing token leaves clipboard unchanged and points to Settings (0.254458ms)
+✔ integration reports failed item title and reason alongside successful copy (1.452333ms)
+✔ snapshot reads metadata safely without modifying items (0.157334ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 238.000125
+$ node scripts/build.mjs
+Built dist/zotero-ads-bibtex-copier-1.0.0.xpi (SHA-256 6fa0528e7e7425c7c056a897fd8f89ec9f92f024a865dade66eac3f96cc082e6)

@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-04T08:19:28.215Z",
+  "transport": "curl (Node DNS unavailable)",
+  "checks": [
+    {
+      "name": "authentication",
+      "passed": true
+    },
+    {
+      "name": "existing bibcode resolution",
+      "passed": true
+    },
+    {
+      "name": "DOI-only resolution",
+      "passed": true
+    },
+    {
+      "name": "arXiv-only resolution",
+      "passed": true
+    },
+    {
+      "name": "single export equals actual ADS response string",
+      "passed": true
+    },
+    {
+      "name": "batch export, deduplication and unchanged entry bodies",
+      "passed": true
+    },
+    {
+      "name": "partial identifier failure retains successful live export",
+      "passed": true
+    },
+    {
+      "name": "invalid token rejected with sanitized error",
+      "passed": true
+    }
+  ],
+  "requests": 12
+}

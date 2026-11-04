@@ -1,0 +1,12 @@
+import { readFileSync } from "node:fs";
+import type { Paper } from "../src/types";
+export const A = "2015ApJS..219...21Z";
+export const B = "2024arXiv240112345S";
+export const C = "2023MNRAS.520..100D";
+export const published = readFileSync(new URL("fixtures/published.bib", import.meta.url), "utf8");
+export const preprint = readFileSync(new URL("fixtures/preprint.bib", import.meta.url), "utf8");
+export const mnras = `@ARTICLE{${C},\r\n author = {{Doe}, A.},\r\n title = {Test},\r\n journal = {\\mnras},\r\n year = 2023\r\n}\r\n\r\n`;
+export const aap = published.replace(A, "2020A&A...641A...6P").replace("\\apj", "\\aap");
+export const paper = (fields: Record<string, string>, title = "Test paper"): Paper => ({ fields, title });
+export const byCode = (code: string, title = code) => paper({ extra: `ADS Bibcode: ${code}` }, title);
+export const searchResult = (bibcode: string) => ({ numFound: 1, docs: [{ bibcode, identifier: [bibcode] }] });

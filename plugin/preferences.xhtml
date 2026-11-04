@@ -1,0 +1,22 @@
+<vbox id="adsbib-preferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml">
+  <groupbox>
+    <html:h2>NASA ADS API token</html:h2>
+    <html:p>Copy BibTeX directly from NASA ADS using your personal API token.</html:p>
+    <html:p id="adsbib-stored">Checking credential store…</html:p>
+    <html:label for="adsbib-token">New or replacement API token</html:label>
+    <html:input id="adsbib-token" type="password" autocomplete="off" spellcheck="false" style="width: 100%; box-sizing: border-box; margin: 8px 0;" />
+    <html:div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <html:button id="adsbib-save" type="button">Save Token</html:button>
+      <html:button id="adsbib-test" type="button">Test Connection</html:button>
+      <html:button id="adsbib-remove" type="button">Remove Saved Token</html:button>
+      <html:button id="adsbib-token-link" type="button">Get an ADS Token</html:button>
+    </html:div>
+    <html:p id="adsbib-status" role="status" aria-live="polite"></html:p>
+    <html:p>Tokens are stored in Zotero’s credential store and sent only to api.adsabs.harvard.edu. Test Connection uses the typed token, or the saved token if this field is empty.</html:p>
+  </groupbox>
+  <groupbox>
+    <html:h2>Copy original ADS BibTeX</html:h2>
+    <html:p>Select papers in your library, right-click, and choose “Copy NASA ADS BibTeX”. Then paste into your .bib file.</html:p>
+    <html:p>Identifiers are checked in this order: ADS bibcode, DOI, arXiv ID. Add “ADS Bibcode: 2015ApJS..219...21Z” to Extra when you need to identify a specific ADS record.</html:p>
+  </groupbox>
+</vbox>

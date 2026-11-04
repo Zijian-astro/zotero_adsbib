@@ -1,0 +1,22 @@
+{
+  "name": "zotero-ads-bibtex-copier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Copy original NASA ADS BibTeX from Zotero without regenerating citations",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "build": "node scripts/build.mjs",
+    "check": "pnpm typecheck && pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "esbuild": "0.25.12",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "engines": { "node": ">=22" },
+  "packageManager": "pnpm@11.25.0"
+}

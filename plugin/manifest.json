@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Zotero ADS BibTeX Copier",
+  "version": "1.0.0",
+  "description": "Copy original NASA ADS BibTeX for selected papers without regenerating citations.",
+  "author": "Zotero ADS BibTeX Copier contributors",
+  "applications": {
+    "zotero": {
+      "id": "ads-bibtex-copier@zotero-adsbib.org",
+      "update_url": "https://example.invalid/zotero-ads-bibtex-copier/updates.json",
+      "strict_min_version": "7.0",
+      "strict_max_version": "7.0.*"
+    }
+  }
+}
